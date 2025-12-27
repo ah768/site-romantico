@@ -1,109 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surpresa ❤️</title>
+  <meta charset="UTF-8">
+  <title>Surpresa 💖</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
     body {
-      background: linear-gradient(180deg, #ff8fa3, #ffb3c6, #ffd6e0);
-      min-height: 100vh;
-      color: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
       text-align: center;
+      background: linear-gradient(180deg, #ff9acb, #ffc0da);
+      color: #fff;
     }
 
-    /* TELA INICIAL */
-    .intro {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .intro button {
-      margin-top: 25px;
-      padding: 18px 35px;
-      font-size: 18px;
+    button {
+      margin-top: 40vh;
+      padding: 20px 40px;
+      font-size: 24px;
       border: none;
-      border-radius: 40px;
-      background: #ff4d6d;
+      border-radius: 30px;
+      background-color: #ff4f9a;
       color: white;
       cursor: pointer;
-      transition: 0.3s;
     }
 
-    .intro button:hover {
-      transform: scale(1.05);
-      background: #ff2e55;
-    }
-
-    /* CONTEÚDO */
-    .content {
+    #conteudo {
       display: none;
-      padding: 40px 20px 60px;
+      padding: 40px 20px;
     }
 
-    .title {
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    .photos img {
-      width: 100%;
+    img {
+      width: 90%;
       max-width: 400px;
-      margin: 20px auto;
+      margin: 20px 0;
       border-radius: 20px;
-      display: block;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .final-text {
-      margin-top: 40px;
-      font-size: 18px;
-      line-height: 1.4;
-      padding-bottom: 30px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- TELA INICIAL -->
-  <div class="intro" id="intro">
-    <h1>💗</h1>
-    <button onclick="abrirSurpresa()">Surpresaaa!!!!!</button>
-  </div>
+  <button onclick="mostrar()">Surpresaaa!!!!!</button>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <div class="content" id="content">
-    <div class="title">Eu sempre te amarei muito minha princesa 💖</div>
+  <div id="conteudo">
+    <h2>Eu sempre te amarei muito minha princesa</h2>
 
-    <div class="photos">
-      <img src="foto1.jpg" alt="Nós dois">
-      <img src="foto2.jpg" alt="Momentos juntos">
-      <img src="foto3.jpg" alt="Te amo">
-      <img src="foto4.jpg" alt="Mais um momento nosso">
-    </div>
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
 
-    <div class="final-text">
-      Esses foram os momentos que fizeram minha vida mais feliz,<br>
-      eu espero sempre ter você ao meu lado &lt;3
-    </div>
+    <p style="margin-top: 40px; font-size: 18px;">
+      esses foram os momentos que fizeram minha vida mais feliz,
+      eu espero sempre ter vc ao meu lado &lt;3
+    </p>
   </div>
 
   <script>
-    function abrirSurpresa() {
-      document.getElementById('intro').style.display = 'none';
-      document.getElementById('content').style.display = 'block';
-      window.scrollTo(0, 0);
+    function mostrar() {
+      document.querySelector("button").style.display = "none";
+      document.getElementById("conteudo").style.display = "block";
     }
   </script>
 
